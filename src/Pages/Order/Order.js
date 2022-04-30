@@ -12,7 +12,7 @@ const Order = () => {
     const navigate = useNavigate();
     useEffect(() => {
         const getOrders = async () => {
-            const url = `http://localhost:5000/order?email=${user.email}`;
+            const url = `https://sleepy-beyond-23974.herokuapp.com/order?email=${user.email}`;
             try {
                 const { data } = await axiosPrivate.get(url);
                 setOrders(data);
